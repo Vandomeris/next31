@@ -1,0 +1,59 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "a title"
+        },
+        {
+            "id": "2",
+            "title": "another title"
+        }
+    ],
+    "comments": [
+        {
+            "id": "1",
+            "text": "a comment about post 1",
+            "postId": "1"
+        },
+        {
+            "id": "2",
+            "text": "another comment about post 1",
+            "postId": "1"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "rooms": [
+        {
+            "name": "Стандартный номер с 1 кроватью",
+            "type": "standart++",
+            "size": 30,
+            "rooms": 1,
+            "balcony": false,
+            "beds": 1,
+            "max-guests": 2,
+            "price": 4000
+        },
+        {
+            "name": "Номер полулюкс с двумя кроватями",
+            "type": "semilux",
+            "size": 40,
+            "rooms": 2,
+            "balcony": true,
+            "beds": 2,
+            "max-guests": 4,
+            "price": 7500
+        },
+        {
+            "name": "Номер люкс с тремя комнатами и видом на океан",
+            "type": "lux",
+            "size": 100,
+            "rooms": 3,
+            "balcony": true,
+            "beds": 3,
+            "max-guests": 6,
+            "price": 10000
+        }
+    ]
+}
