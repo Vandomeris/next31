@@ -4,22 +4,31 @@ import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 
+export default function AddRoomForm({ setRooms }) {
 
 
-async function handleSubmit(e) {
-    e.preventDefault()
+    async function handleSubmit(e) {
+        e.preventDefault()
 
-    const formData = new FormData(e.target)
+        const formData = new FormData(e.target)
 
-    const resp = await fetch('/api/admin/user/create', {
-        method: 'PUT',
-        body: formData
-    })
-}
+        const resp = await fetch('/api/admin/rooms/create', {
+            method: 'PUT',
+            body: formData
+        })
+
+        const result = await resp.json()
 
 
+        if (resp.ok) {
+            setRooms((prev) => ([
+                ...prev,
+                result
+            ]))
+        }
+    }
 
-export default function AddRoomForm() {
+
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
 
