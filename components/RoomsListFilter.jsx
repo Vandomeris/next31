@@ -20,6 +20,7 @@ export default function RoomsListFilter({ rooms, minMax }) {
                         peopleMax={room.peopleMax}
                         price={room.price}
                         address={room.address}
+                        photos={room.photos}
                     />
                 ))
             }

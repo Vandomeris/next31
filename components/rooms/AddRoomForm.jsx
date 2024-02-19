@@ -38,7 +38,7 @@ export default function AddRoomForm({ setRooms }) {
             <Input name="address" required type="text" placeholder="Адрес" />
             <Input name="price" required type="number" placeholder="Цена" />
             <Textarea name="description" required placeholder="Введите описание команты" />
-            <Input name="image" required type="file" />
+            <Input multiple name="image" required type="file" />
             <div className="text-center">
                 <Button>Добавить комнату</Button>
             </div>

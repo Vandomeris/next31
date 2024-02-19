@@ -6,12 +6,8 @@ const client = new PrismaClient()
 
 async function getRooms() {
     return await client.rooms.findMany({
-        select: {
-            id: true,
-            name: true,
-            peopleMax: true,
-            address: true,
-            price: true,
+        include: {
+            photos: true
         }
     })
 }
@@ -31,6 +27,7 @@ async function getMinMaxPrice() {
 
 export default async function RoomsPage() {
     const rooms = await getRooms()
+
     const minMax = await getMinMaxPrice()
     return (
         <RoomsListFilter rooms={rooms} minMax={minMax} />
