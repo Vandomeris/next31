@@ -11,7 +11,7 @@ async function getRooms() {
             name: true,
             peopleMax: true,
             address: true,
-            price: true
+            price: true,
         }
     })
 }
